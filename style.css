@@ -9,3 +9,14 @@
  Tags:         one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blue, light
  Text Domain:  powell
 */
+
+/* Custom child theme style */
+.site-footer .site-info,
+.site-footer .btt a {
+    background: #2d72d9;
+    color: #FFF;
+}
+
+.hero-slideshow-wrapper::after {
+    background-color: rgba(45, 114, 217, 1);
+}
