@@ -1,13 +1,28 @@
 <?php
+/**
+ * OnePress Child Theme Functions
+ *
+ */
 
+/**
+ * Enqueue child theme style
+ */
+add_action( 'wp_enqueue_scripts', 'powell_child_enqueue_styles', 15 );
+function powell_child_enqueue_styles()
+{
+    wp_enqueue_style('onepress-child-style', get_stylesheet_directory_uri() . '/style.css');
+}
+
+/**
+ * Remove header transparent function
+ *
+ * @param $wp_customize
+ */
 function powell_customizer( $wp_customize ){
     $wp_customize->remove_setting( 'onepress_header_transparent' );
     $wp_customize->remove_control( 'onepress_header_transparent' );
 
 }
-/**
- * Hook to add other customize
- */
 add_action( 'customize_register', 'powell_customizer', 75 );
 
 
